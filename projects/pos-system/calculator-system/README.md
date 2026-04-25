@@ -1,28 +1,8 @@
 """
-[계산기 클래스]
-- 숫자와 문자를 구분하여 각각 리스트에 저장
-- 숫자 리스트를 이용해 사칙연산 및 평균, 최댓값, 최솟값 계산
-
-[입력 처리]
-- 값을 입력 후 Enter를 누르면 실행
-- 숫자는 numbers 리스트, 문자는 strings 리스트에 저장
-
-[화면 출력]
-- 저장된 숫자와 문자를 각각 구분하여 화면에 표시
-
-[계산 기능]
-- 버튼 클릭 시 선택한 연산 수행
-- 결과를 화면에 출력
-
-[UI 구성]
-- 입력창, 숫자/문자 표시 영역, 계산 버튼, 결과 출력 영역으로 구성
-
-[사용자 편의 기능]
-- 입력 후에도 커서가 유지되어 계속 입력 가능
-- Enter 키로 빠르게 데이터 입력 가능
-
-[프로그램 실행]
-- Flet을 이용하여 계산기 앱 실행
+[Smart Calculator]
+- 숫자와 문자를 구분 저장
+- 사칙연산, 평균, 최댓값/최솟값 계산
+- Flet 기반 UI 계산기
 """
 
 import flet as ft
@@ -30,10 +10,10 @@ import flet as ft
 
 class SmartCalculator:
     def __init__(self):
-        self.numbers = []
-        self.strings = []
+        self.numbers = []   # 숫자 저장 리스트
+        self.strings = []   # 문자열 저장 리스트
 
-    
+    # 입력값을 숫자/문자로 분리 저장
     def add_value(self, value):
         try:
             num = float(value)
@@ -41,9 +21,11 @@ class SmartCalculator:
         except:
             self.strings.append(value)
 
+    # 덧셈
     def add(self):
         return sum(self.numbers)
 
+    # 뺄셈 (순차 계산)
     def sub(self):
         if not self.numbers:
             return 0
@@ -52,12 +34,14 @@ class SmartCalculator:
             result -= n
         return result
 
+    # 곱셈
     def mul(self):
         result = 1
         for n in self.numbers:
             result *= n
         return result
 
+    # 나눗셈 (0 체크 포함)
     def div(self):
         if not self.numbers:
             return 0
@@ -68,16 +52,19 @@ class SmartCalculator:
             result /= n
         return result
 
+    # 평균
     def avg(self):
         if not self.numbers:
             return 0
         return sum(self.numbers) / len(self.numbers)
 
+    # 최댓값
     def max(self):
         if not self.numbers:
             return None
         return max(self.numbers)
 
+    # 최솟값
     def min(self):
         if not self.numbers:
             return None
@@ -85,6 +72,7 @@ class SmartCalculator:
 
 
 def main(page: ft.Page):
+    # 페이지 기본 설정
     page.title = "Smart Input Calculator"
     page.bgcolor = "#F4F6F8"
     page.scroll = ft.ScrollMode.AUTO
@@ -92,7 +80,7 @@ def main(page: ft.Page):
 
     calc = SmartCalculator()
 
- 
+    # 입력창
     input_field = ft.TextField(
         label="값 입력 후 Enter",
         autofocus=True,
@@ -100,11 +88,12 @@ def main(page: ft.Page):
         bgcolor="white"
     )
 
+    # 표시 영역
     number_view = ft.Column(spacing=5)
     string_view = ft.Column(spacing=5)
     result_text = ft.Text(size=18, weight="bold", color="#2F6F3E")
 
-   
+    # 화면 업데이트 (숫자/문자 표시)
     def update_view():
         number_view.controls.clear()
         string_view.controls.clear()
@@ -131,7 +120,7 @@ def main(page: ft.Page):
 
         page.update()
 
-   
+    # Enter 입력 처리
     def on_submit(e):
         value = input_field.value.strip()
         if value == "":
@@ -139,12 +128,12 @@ def main(page: ft.Page):
 
         calc.add_value(value)
         input_field.value = ""
-        input_field.focus()   # ⭐ 커서 유지 핵심
+        input_field.focus()  # 입력 유지
         update_view()
 
     input_field.on_submit = on_submit
 
-    
+    # 계산 실행
     def run_calc(func):
         if not calc.numbers:
             result_text.value = "숫자가 없습니다"
@@ -154,6 +143,7 @@ def main(page: ft.Page):
         input_field.focus()
         page.update()
 
+    # 버튼 생성 함수
     def calc_button(text, func, color):
         return ft.ElevatedButton(
             text,
@@ -167,6 +157,7 @@ def main(page: ft.Page):
             expand=True
         )
 
+    # UI 구성
     page.add(
         ft.Container(
             width=600,
