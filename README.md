@@ -1,56 +1,37 @@
-##📌 Python Workspace
+# 💻 Python Development Archive
 
-Python 기반으로 기능 구현부터 프로젝트까지 확장하며,
-코드 구조 설계와 문제 해결 과정을 중심으로 정리한 저장소입니다.
+Python의 기초부터 실전 프로젝트까지, **논리적인 설계**와 **문제 해결 과정**을 중심으로 기록하는 저장소입니다.
 
+## 🛠 Tech Stack
+* **Language:** Python 3.x (Standard Library)
+* **Libraries:** `pandas`, `numpy`, `matplotlib`
 
-##🚀 Overview
-기능 단위 코드 구현
-객체 지향 기반 설계 적용
-프로젝트 단위 로직 구성 및 확장
+---
 
+## 📂 Directory Structure
 
-##🧩 Tech Stack
-Python 3.x
-Standard Library
-pandas, numpy, matplotlib, requests
+| 폴더명 | 내용 설명 |
+| :--- | :--- |
+| **`/basics`** | 기초 문법 (데이터 타입, 조건문, 반복문 등) |
+| **`/functions`** | 코드 설계 및 모듈화 연습 |
+| **`/oop`** | 객체 지향 프로그래밍(OOP) 및 클래스 구성 |
+| **`/practice`** | 개념 적용 실습 및 기본 예제 |
+| **`/mini-project`** | 기능별로 분리된 설계 기반 프로젝트 |
 
+---
 
-##📂 Directory Structure
-/basics
-→ 기본 문법 및 데이터 처리
+## 🚀 Main Projects
 
-/functions
-→ 함수 설계 및 모듈화
+### 1. 볼링 점수 계산 시스템 🎳
+* **Description:** 스트라이크와 스페어 처리를 포함한 복잡한 점수 체계 구현
+* **Key Feature:** 프레임별 로직 설계 및 응답 점수 자동 계산
 
-/oop
-→ 객체 지향 프로그래밍
+### 2. 다기능 계산기 시스템 🔢
+* **Description:** 입력값 기반 처리 방식의 구조적 구현
+* **Key Feature:** 기능별 구조 분리 및 독립적 실행이 가능한 코드 구축
 
-/practice
-→ 기능 단위 구현
+---
 
-/mini-project
-→ 프로젝트 구현
-
-
-##🔥 Key Features
-기능 단위로 분리된 코드 구조
-객체 지향 기반 설계
-문제 해결 중심 구현
-프로젝트 단위 확장 경험
-
-
-##📌 Projects
-🎳 Bowling Score System
-프레임 단위 점수 계산 로직 구현
-스트라이크 / 스페어 처리 및 누적 점수 계산
-
-
-🧮 Calculator System
-입력값 기반 연산 처리 로직 구현
-계산 기능 구조 분리 및 확장
-
-
-##📌 Notes
-각 기능 및 프로젝트는 독립적으로 실행 가능
-코드 구조 개선 및 기능 확장을 지속적으로 진행 중
+## 📝 Note
+* 각 기능 및 프로젝트는 **독립적으로 실행 가능**합니다.
+* 현재는 코드의 가독성 개선과 기능 확장 및 최적화 작업을 진행 중입니다.
