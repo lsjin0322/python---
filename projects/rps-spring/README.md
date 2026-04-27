@@ -10,7 +10,10 @@
 먼저 3승을 달성하는 쪽이 승리하는 게임입니다.
 
 ---
+<img width="330" height="438" alt="image" src="https://github.com/user-attachments/assets/1d0b7efb-b2e7-4522-b137-11ff623e2be3" />
 
+
+---
 ## 🚀 Features
 
 - 버튼 기반 가위바위보 선택
