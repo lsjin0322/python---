@@ -10,6 +10,9 @@
 스트라이크, 스페어 규칙을 적용하여 누적 점수를 계산하는 프로그램입니다.
 
 ---
+<img width="840" height="365" alt="image" src="https://github.com/user-attachments/assets/161d6f94-1355-40c3-b4f4-4a72dfacfbed" />
+
+---
 
 ## 🚀 Features
 
