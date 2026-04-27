@@ -10,6 +10,10 @@
 검색, 수정, 삭제 기능과 함께 JSON 파일을 활용한 데이터 저장 기능을 제공합니다.
 
 ---
+<img width="330" height="438" alt="image" src="https://github.com/user-attachments/assets/1d0b7efb-b2e7-4522-b137-11ff623e2be3" />
+
+
+---
 
 ## 🚀 Features
 
