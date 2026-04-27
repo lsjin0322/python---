@@ -10,6 +10,12 @@
 다양한 계산 기능을 제공하는 GUI 계산기입니다.
 
 ---
+<img width="679" height="489" alt="image" src="https://github.com/user-attachments/assets/09e67888-2729-46f8-b6e6-bb039275f059" />
+[]
+[최댓값]
+<img width="650" height="632" alt="image" src="https://github.com/user-attachments/assets/16ab6f7a-2c1d-4ad4-a6be-5a915f80e629" />
+
+---
 
 ## 🚀 Features
 
